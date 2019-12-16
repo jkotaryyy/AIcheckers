@@ -57,10 +57,12 @@ Tese functions will define all the node classes, and the functions to run the tr
 ```bash
 class ParentRootNode(object): Define the root node
 class Node(object): Includes all the functions needed to traverse the tree
-def MCTS_Search_AI(board, player, num_reads, n_net): Do MCST with neural network
-def MCTS_Search(board, player, num_reads): Do MCST with neural network
+def MCTS_Search(board, player, num_reads, n_net): Do MCST with neural network
 def policy(node, temp=1): To calculate the policy
 def MCTS_self_play(): The self play function
+def MCTS_Play_WithRandom(nnet, num_games): To play with a random coice oponente returns win and draw 
+def training(n_net, batch_size, n_epochs, learning_rate, dataset): To train the neural network
+def evaluate(n_net, n_games): It calls self_play to generate traing data and calls training function returns the neural net
 ```
 # CNN class
 ```bash
