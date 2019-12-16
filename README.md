@@ -13,8 +13,11 @@ checkers.py: All the game functions are in the file.
 # Game Rules
 The game rules of our modified Checkers follow the standard rules of Checkers but with two additional rules. 1. When a piece is jumped, it has a chance to remain on the board, unaffected. 2. Sequences of double-jumps are not allowed. 
 # How to run
-```bash
-The self_play function: The tree(player) will play against a baseline opponent 
+Run mcts.py.
+IN the main function the evaluator() will call self_play to generate training data and use the data to train the network.
+Uncomment checkers.print_board(board) to see the board after each action.
+For personal play with random choice opponent run checkers.py
+The MCTS_play_withRandom function: The tree(player) will play against a itself opponent 
 which always plays its turn by choosing an action uniformly at random
 The evaluate function: Everything will combine together, starting with the search tree, train by the neural network, than update the data.
 ```
