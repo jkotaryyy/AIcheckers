@@ -17,8 +17,10 @@ Run mcts.py.
 
 IN the main function the evaluator() will call self_play to generate training data and use the data to train the network.
 Uncomment checkers.print_board(board) to see the board after each action.
+
 For personal play with random choice opponent run checkers.py
-The MCTS_play_withRandom function: The tree(player) will play against a itself opponent 
+
+The MCTS_play_withRandom function: The tree(player) will play against a random choice opponent 
 which always plays its turn by choosing an action uniformly at random
 The evaluate function: Everything will combine together, starting with the search tree, train by the neural network, than update the data.
 ```
